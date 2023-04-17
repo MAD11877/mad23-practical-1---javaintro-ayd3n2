@@ -28,15 +28,28 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
     int highest = 0;
-    int num;
-    int[] data;
+    int num = 0;
     System.out.println("Enter an integer:");
     int number = in.nextInt();
-    for(int i = number; i > 0; i--){
+    int[] narr = new int[number];
+    for(int i = 0; i < number; i++){
       System.out.println("Enter a number:");
       int val = in.nextInt();
-      data = new int[val];
+      narr[i] = val;      
+    } 
+    for(int n = 0; n < number; n++){
+      int count = 0;
+      for(int m = 0; m < number; m++){
+        if(narr[n] == narr[m]){
+          ++count;  
+        }
+      }
+      if(count > highest){
+        highest = count;
+        num = narr[n];
+      }
     }
+    System.out.println(num);
     
   }
 }
