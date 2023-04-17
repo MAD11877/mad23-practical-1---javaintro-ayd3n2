@@ -13,7 +13,7 @@ public class Question3
     System.out.println("Enter an integer:");
     int number = in.nextInt();
     int result = number * number;
-    System.out.println("The result is " + result);
+    System.out.println(result);
     
   }
 }
