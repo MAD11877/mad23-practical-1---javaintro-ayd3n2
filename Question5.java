@@ -27,6 +27,27 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    int highest = 0;
+    int num = 0;
+    int number = in.nextInt();
+    int[] narr = new int[number];
+    for(int i = 0; i < number; i++){
+      int val = in.nextInt();
+      narr[i] = val;      
+    } 
+    for(int n = 0; n < number; n++){
+      int count = 0;
+      for(int m = 0; m < number; m++){
+        if(narr[n] == narr[m]){
+          ++count;  
+        }
+      }
+      if(count > highest){
+        highest = count;
+        num = narr[n];
+      }
+    }
+    System.out.println(num);
     
   }
 }
